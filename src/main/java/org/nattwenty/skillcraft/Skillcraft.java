@@ -121,6 +121,10 @@ public class Skillcraft implements ModInitializer {
         skillTreeList.add(skillTree);
     }
 
+    public static int getPlayerPerk(Entity entity, String key) {
+        return SkillcraftComponents.getPerk(entity, key);
+    }
+
     public void initExamplePerks(Skilltree skilltree) {
         skilltree.clearPerks();
         SkillCraftPerk perk1 = new SkillCraftPerk(

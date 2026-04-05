@@ -15,5 +15,7 @@
   "skillcraft.trees.name.test-perk-tree-1": "Alchemy",
   "skillcraft.trees.name.test-perk-tree-2": "Enchanting",
   "skillcraft.perks.name.test-3": "Perk #3",
-  "skillcraft.perks.description.test-3": "A test perk."
+  "skillcraft.perks.description.test-3": "A test perk.",
+  "skillcraft.perks.name.test-4": "Perk #3",
+  "skillcraft.perks.description.test-4": "A test perk."
 }

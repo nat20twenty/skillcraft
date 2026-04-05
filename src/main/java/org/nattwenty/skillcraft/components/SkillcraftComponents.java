@@ -40,7 +40,7 @@ public class SkillcraftComponents implements EntityComponentInitializer {
     }
 
     public static int getPerk(Entity provider, String key) {
-        return PERKSCOMPONENT.get(provider).getKey(key);
+        return PERKSCOMPONENT.get(provider).getMap().getOrDefault(key, 0);
     }
     public static void setPerkLevel(Entity provider, String key, int value) {
         PERKSCOMPONENT.get(provider).set(key, value);

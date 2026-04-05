@@ -1,0 +1,16 @@
+{
+  "minecraft:recipes/decorations/crafting_table": {
+    "criteria": {
+      "unlock_right_away": "2026-04-04 14:53:45 -0400"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:dark_forest": "2026-04-04 14:54:53 -0400",
+      "minecraft:old_growth_spruce_taiga": "2026-04-04 14:53:46 -0400"
+    },
+    "done": false
+  },
+  "DataVersion": 4671
+}

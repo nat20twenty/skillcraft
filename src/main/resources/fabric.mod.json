@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "id": "skillcraft",
+  "version": "${version}",
+  "name": "SkillCraft",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/skillcraft/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "org.nattwenty.skillcraft.client.SkillcraftDataGenerator"
+    ],
+    "client": [
+      "org.nattwenty.skillcraft.client.SkillcraftClient"
+    ],
+    "main": [
+      "org.nattwenty.skillcraft.Skillcraft"
+    ],
+    "cardinal-components": [
+      "org.nattwenty.skillcraft.components.SkillcraftComponents"
+    ]
+  },
+  "mixins": [
+    "skillcraft.mixins.json",
+    {
+      "config": "skillcraft.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  },
+  "custom": {
+    "cardinal-components": [
+      "skillcraft:perk_points",
+      "skillcraft:perks",
+      "skillcraft:max_level"
+    ]
+  }
+}

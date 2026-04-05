@@ -1,0 +1,36 @@
+{
+  "stats": {
+    "minecraft:picked_up": {
+      "minecraft:coal": 63,
+      "minecraft:diamond": 1,
+      "minecraft:netherite_scrap": 1
+    },
+    "minecraft:custom": {
+      "minecraft:interact_with_furnace": 10,
+      "minecraft:sprint_one_cm": 753,
+      "minecraft:time_since_rest": 29494,
+      "minecraft:walk_one_cm": 1806,
+      "minecraft:total_world_time": 29664,
+      "minecraft:leave_game": 1,
+      "minecraft:fly_one_cm": 4627,
+      "minecraft:crouch_one_cm": 48,
+      "minecraft:sneak_time": 71,
+      "minecraft:play_time": 29494,
+      "minecraft:jump": 6,
+      "minecraft:time_since_death": 29494
+    },
+    "minecraft:mined": {
+      "minecraft:diamond_ore": 1
+    },
+    "minecraft:used": {
+      "minecraft:diamond_pickaxe": 1,
+      "minecraft:diamond_ore": 1,
+      "minecraft:furnace": 1
+    },
+    "minecraft:crafted": {
+      "minecraft:charcoal": 1,
+      "minecraft:netherite_scrap": 1
+    }
+  },
+  "DataVersion": 4671
+}

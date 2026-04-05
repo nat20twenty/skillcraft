@@ -1,0 +1,22 @@
+{
+  "minecraft:recipes/decorations/crafting_table": {
+    "criteria": {
+      "unlock_right_away": "2026-04-02 00:49:04 -0400"
+    },
+    "done": true
+  },
+  "minecraft:adventure/adventuring_time": {
+    "criteria": {
+      "minecraft:beach": "2026-04-04 00:50:17 -0400",
+      "minecraft:bamboo_jungle": "2026-04-02 00:49:05 -0400"
+    },
+    "done": false
+  },
+  "minecraft:recipes/misc/netherite_ingot": {
+    "criteria": {
+      "has_netherite_scrap": "2026-04-04 00:50:16 -0400"
+    },
+    "done": true
+  },
+  "DataVersion": 4671
+}

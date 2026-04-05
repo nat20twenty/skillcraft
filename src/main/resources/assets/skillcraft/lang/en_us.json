@@ -1,0 +1,19 @@
+{
+  "key.category.skillcraft.category": "SkillCraft",
+  "key.skillcraft.open_perk_screen": "Open Perk Screen",
+  "skillcraft.button.close": "Close",
+  "skillcraft.button.prestige": "Prestige",
+  "skillcraft.chat.prestige-message": "%s has prestiged! [x%s]",
+  "skillcraft.ui.skill-perks-message": "Perk Points: %1$s",
+  "skillcraft.ui.max-level-message": "Max Level: %s",
+  "skillcraft.ui.no-skilltrees-message": "Add some skill tree mods to get started!",
+
+  "skillcraft.perks.name.test-1": "Perk #1",
+  "skillcraft.perks.description.test-1": "A test perk.",
+  "skillcraft.perks.name.test-2": "Perk #2 [%1$s/%2$s]",
+  "skillcraft.perks.description.test-2": "A test perk.",
+  "skillcraft.trees.name.test-perk-tree-1": "Alchemy",
+  "skillcraft.trees.name.test-perk-tree-2": "Enchanting",
+  "skillcraft.perks.name.test-3": "Perk #3",
+  "skillcraft.perks.description.test-3": "A test perk."
+}

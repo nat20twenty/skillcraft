@@ -52,7 +52,7 @@ public class Skillcraft implements ModInitializer {
         Networking.registerC2SPackets();
         registerCommands();
         SkillcraftEvents.register();
-        /**
+
         Skilltree skilltree = new Skilltree(
                 "skillcraft.trees.name.test-perk-tree-1",
                 Identifier.parse("textures/item/dragon_breath.png"),
@@ -70,7 +70,7 @@ public class Skillcraft implements ModInitializer {
         );
         initExamplePerks2(skilltree);
         skillTreeList.add(skilltree);
-        **/
+
     }
 
     public void registerCommands() {
@@ -180,6 +180,8 @@ public class Skillcraft implements ModInitializer {
     public static void requestPerk(String perkId, Entity player) {
         int points = SkillcraftComponents.getPerkPoints(player);
         SkillCraftPerk perk = getPerkByName(perkId);
+        System.out.println(perk.toString());
+
 
         HashMap<String, Integer> map = SkillcraftComponents.getPerks(player);
 
@@ -268,22 +270,15 @@ public class Skillcraft implements ModInitializer {
     }
 
     public static SkillCraftPerk getPerkByName(String key) {
-        SkillCraftPerk perk = null;
-        int i = 0;
-        int j = 0;
-        while(i < skillTreeList.size() && j < skillTreeList.get(i).getPerks().size() && !skillTreeList.get(i).getPerks().get(j).getSkillName().equals(key)) {
-            while(i < skillTreeList.size() && j < skillTreeList.get(i).getPerks().size() && !skillTreeList.get(i).getPerks().get(j).getSkillName().equals(key)) {
-                j++;
+        for (Skilltree t : skillTreeList) {
+            for (SkillCraftPerk perk : t.getPerks()) {
+                if (perk.getSkillName().equals(key)) {
+                    return perk;
+                }
             }
-            j = 0;
-            i++;
         }
 
-        if (i < skillTreeList.size() && j < skillTreeList.get(i).getPerks().size()) {
-            perk =  skillTreeList.get(i).getPerks().get(j);
-        }
-
-        return perk;
+        return null;
     }
 
     private static int getPerkLevels(CommandContext<CommandSourceStack> context) throws CommandSyntaxException {

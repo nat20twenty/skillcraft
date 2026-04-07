@@ -52,7 +52,7 @@ public class Skillcraft implements ModInitializer {
         Networking.registerC2SPackets();
         registerCommands();
         SkillcraftEvents.register();
-
+        /**
         Skilltree skilltree = new Skilltree(
                 "skillcraft.trees.name.test-perk-tree-1",
                 Identifier.parse("textures/item/dragon_breath.png"),
@@ -70,7 +70,7 @@ public class Skillcraft implements ModInitializer {
         );
         initExamplePerks2(skilltree);
         skillTreeList.add(skilltree);
-
+        **/
     }
 
     public void registerCommands() {

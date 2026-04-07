@@ -5,17 +5,19 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.AbstractWidget;
+import net.minecraft.client.gui.components.Tooltip;
 import net.minecraft.client.gui.narration.NarrationElementOutput;
 import net.minecraft.client.input.MouseButtonEvent;
 import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
+import net.minecraft.network.chat.Style;
 import org.nattwenty.skillcraft.SkillCraftPerk;
 import org.nattwenty.skillcraft.Skilltree;
 
 public class PerkWidget extends AbstractWidget {
     private final SkillCraftPerk perk;
     private final Skilltree tree;
-
 
     public PerkWidget(int x, int y, int width, int height, SkillCraftPerk perk, Skilltree tree) {
         super(x, y, width, height, null);
@@ -26,7 +28,6 @@ public class PerkWidget extends AbstractWidget {
     @Override
     protected void renderWidget(GuiGraphics context, int mouseX, int mouseY, float delta) {
         if (!SkillCraftPerkScreen.getSelectedTree().equals(tree)) {return;}
-
         Font renderer = Minecraft.getInstance().font;
         int center_x = getX() + Math.round(width/2f);
         int size_offset = Math.round((width - 16)/2f);
@@ -65,7 +66,15 @@ public class PerkWidget extends AbstractWidget {
                 16,
                 16
         );
-        context.drawString(renderer, name, center_x - renderer.width(name)/2, getY() + height + 1, 0xF0F0F0FF, true);
+
+        /**if (isHovered()) {
+            context.drawString(renderer, name, center_x - renderer.width(name)/2, getY() + height + 1, 0xF0F0F0FF, true);
+        }**/
+    }
+
+    public void updateTooltip() {
+        MutableComponent name = Component.translatable(this.perk.getSkillName(), SkillCraftPerkScreen.getPerkLevel(this.perk.getSkillName()), this.perk.getSkillMax());
+        this.setTooltip(Tooltip.create(name.append("\n").append(Component.translatable(this.perk.getSkillDescription()))));
     }
 
     @Override

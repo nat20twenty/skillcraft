@@ -15,11 +15,6 @@ import org.nattwenty.skillcraft.Skilltree;
 
 public class SkilltreePickerWidget extends AbstractWidget {
     private final Skilltree tree;
-    //private final Identifier icon_path;
-    //private final Identifier bg_path;
-    //private final MutableComponent name;
-    //private final int treeVal;
-    //private final Vector4i bounds;
 
 
     public SkilltreePickerWidget(int x, int y, int width, int height, Skilltree tree) {

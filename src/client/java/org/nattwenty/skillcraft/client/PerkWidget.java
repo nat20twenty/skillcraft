@@ -74,7 +74,7 @@ public class PerkWidget extends AbstractWidget {
 
     public void updateTooltip() {
         MutableComponent name = Component.translatable(this.perk.getSkillName(), SkillCraftPerkScreen.getPerkLevel(this.perk.getSkillName()), this.perk.getSkillMax());
-        this.setTooltip(Tooltip.create(name));
+        this.setTooltip(Tooltip.create(name.append("\n").append(Component.translatable(perk.getSkillDescription()))));
     }
 
     @Override

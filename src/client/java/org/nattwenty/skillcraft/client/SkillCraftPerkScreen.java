@@ -40,7 +40,7 @@ public class SkillCraftPerkScreen extends Screen {
 
     private static SkillCraftPerk selected_perk1;
     private static Skilltree selected_tree1;
-    private ArrayList<PerkWidget> p_widgets;
+    private static ArrayList<PerkWidget> p_widgets;
 
     public SkillCraftPerkScreen() {
         super(Component.nullToEmpty(Skillcraft.MOD_ID + "PerkScreen"));
@@ -177,7 +177,7 @@ public class SkillCraftPerkScreen extends Screen {
         }
     }
 
-    private void updateTooltips() {
+    private static void updateTooltips() {
         for (PerkWidget w : p_widgets) {
             w.updateTooltip();
         }
@@ -268,6 +268,7 @@ public class SkillCraftPerkScreen extends Screen {
                 Minecraft.getInstance().player.playSound(SoundEvents.NOTE_BLOCK_BELL.value(), 4.0f, 1.0f);
                 perk_levels.put(selected_perk1.getSkillName(), new_level);
                 skillPoints -= selected_perk1.getPointsPerLevel();
+                updateTooltips();
                 update_screen = Instant.now().getEpochSecond() + 1;
             }
             else {

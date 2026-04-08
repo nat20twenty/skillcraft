@@ -64,6 +64,7 @@ public class SkillCraftPerkScreen extends Screen {
         initCloseButton();
         initPerkButton();
         initPrestigeButton();
+        updateTooltips();
     }
 
     private void initNoSkillTrees() {
